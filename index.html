@@ -18,22 +18,22 @@
 
     <section id="first" class="quadrant first-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
       <span class="top-left">not URGENT <br> IMPORTANT</span>
-      <tasks quadrant="Q1"></tasks>
+      <tasks quadrant="{{quadrants[0]}}"></tasks>
     </section>
 
     <section id="second" class="quadrant second-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
       <span class="top-right">URGENT <br> IMPORTANT</span>
-      <tasks quadrant="Q2"></tasks>
+      <tasks quadrant="{{quadrants[1]}}"></tasks>
     </section>
 
     <section id="third" class="quadrant third-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
       <span class="bottom-left">not URGENT <br>not IMPORTANT</span>
-      <tasks quadrant="Q3"></tasks>
+      <tasks quadrant="{{quadrants[2]}}"></tasks>
     </section>
 
     <section id="fourth" class="quadrant fourth-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
       <span class="bottom-right">URGENT <br>not IMPORTANT</span>
-      <tasks quadrant="Q4"></tasks>
+      <tasks quadrant="{{quadrants[3]}}"></tasks>
     </section>
 
     <task-input></task-input>
