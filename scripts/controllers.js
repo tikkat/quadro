@@ -46,4 +46,25 @@ fourQuadrantsControllers.controller('mainController', ['$scope', '$rootScope', '
         console.log('Error: ' + data);
       });
   };
+
+  /**
+   * Drag function, sets the value of the dragged object to dataTransfer
+   *
+   * @param {Event} ev
+   */
+  $rootScope.drag = function(ev) {
+    console.log(ev);
+    ev.dataTransfer.setData("text", ev.target.id);
+  };
+
+  /**
+   * Drop function, is launched when someone drops a task in one of the task lists.
+   *
+   */
+
+  function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+  }
 }]);
