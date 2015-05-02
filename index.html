@@ -5,10 +5,10 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
   <title>Four Quadrants</title>
+
   <link href="http://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900" rel="stylesheet" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="build/css/main.min.css" />
-  <script src="scripts/main.js"></script>
 </head>
 <body ng-controller="mainController">
 
@@ -16,24 +16,24 @@
 
     <h1>Quadro</h1>
 
-    <section id="first" class="quadrant first-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <section id="first" class="quadrant first-quadrant" ng-drop="drop($event)" ondragover="allowDrop(event)">
       <span class="top-left">not URGENT <br> IMPORTANT</span>
-      <tasks quadrant="{{quadrants[0]}}"></tasks>
+      <tasks quadrant="{{ quadrants[0] }}"></tasks>
     </section>
 
-    <section id="second" class="quadrant second-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <section id="second" class="quadrant second-quadrant" ng-drop="drop($event)" ondragover="allowDrop(event)">
       <span class="top-right">URGENT <br> IMPORTANT</span>
-      <tasks quadrant="{{quadrants[1]}}"></tasks>
+      <tasks quadrant="{{ quadrants[1] }}"></tasks>
     </section>
 
-    <section id="third" class="quadrant third-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <section id="third" class="quadrant third-quadrant" ng-drop="drop($event)" ondragover="allowDrop(event)">
       <span class="bottom-left">not URGENT <br>not IMPORTANT</span>
-      <tasks quadrant="{{quadrants[2]}}"></tasks>
+      <tasks quadrant="{{ quadrants[2] }}"></tasks>
     </section>
 
-    <section id="fourth" class="quadrant fourth-quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <section id="fourth" class="quadrant fourth-quadrant" ng-drop="drop($event)" ondragover="allowDrop(event)">
       <span class="bottom-right">URGENT <br>not IMPORTANT</span>
-      <tasks quadrant="{{quadrants[3]}}"></tasks>
+      <tasks quadrant="{{ quadrants[3] }}"></tasks>
     </section>
 
     <task-input></task-input>
@@ -46,7 +46,6 @@
     Made with <3 by @tobiastikka
   </footer>
 
-
   <!-- JQUERY -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -56,6 +55,9 @@
   <script src="/scripts/directives.js"></script>
   <script src="/scripts/filters.js"></script>
   <script src="/scripts/app.js"></script>
+
+  <!-- Plain, custom javascript -->
+  <script src="/scripts/main.js"></script>
 
 </body>
 </html>
