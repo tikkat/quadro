@@ -1,6 +1,6 @@
 <div class="tasks">
   <div ng-repeat="task in $root.tasks | reverse | filter: { quadrant: q }">
-    <div draggable="true" ondragstart="drag(event)" class="task-element">
+    <div draggable="true" ondragstart="drag(event)" id="{{task._id}}" class="task-element" data-quadrant="{{q}}">
       {{task.text}} <button class="trash-button" ng-click="$root.deleteTask(task._id)"><i class="fa fa-trash"></i></button>
     </div>
   </div>
