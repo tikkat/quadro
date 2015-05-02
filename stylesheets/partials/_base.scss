@@ -1,0 +1,21 @@
+// Reset
+@import "normalize";
+
+//Import everything from modules
+@import "../modules/all";
+
+html, body {
+  background:      url(/build/images/background-desktop.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  width:           100%;
+  color:           white;
+  font-family:     "Avenir", "Helvetica", "Arial", sans-serif;
+}
+
+footer {
+  float:     left;
+  position: absolute;
+  font-size: 20px;
+  bottom:    1em;
+  left:      1em;
+}

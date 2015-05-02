@@ -1,0 +1,19 @@
+// Typography
+$default-font:	              'Raleway', sans-serif;
+$default-font-size:           18px;
+$footer-font-size:            16px;
+
+//Colors
+$header-color:          #27ae60;
+$blue-button-color:     #3498db;
+
+//Size adjustments
+
+$margin-sides:          25%;
+$base-size:			       	15;
+$leading:				        20;
+$lineheight:		       	($leading/$base-size) * 1em;
+
+// breakpoints
+$mobile:                480px;
+$tablet:                720px;

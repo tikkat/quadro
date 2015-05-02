@@ -1,0 +1,13 @@
+<div class="task-form">
+  <form>
+    <input type="text" class="text-input" placeholder="Type a new task" ng-model="formData.text">
+    <select
+      name="quadrant"
+      ng-model="formData.quadrant"
+      ng-options="q for q in quadrants"
+      ng-init="formData.quadrant = quadrants[0]">
+    </select>
+
+    <button type="submit" ng-click="createTask()">Add</button>
+  </form>
+</div>

@@ -1,0 +1,38 @@
+.tasks {
+  position: absolute;
+  margin:   auto;
+  left:     25%;
+  top:      5em;
+
+  .task-element {
+    font-size:     2vmin;
+    color:         white;
+    text-align:    center;
+    width:         20vw;
+    cursor:        pointer;
+    border:        1px solid gray;
+    border-radius: 5px;
+    margin:        0.2em 0;
+
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+
+    .trash-button {
+      opacity:          0;
+      background-color: transparent;
+      border:           none;
+    }
+
+    &:hover {
+      font-weight: bold;
+      border:      3px solid white;
+
+      button {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/*
+Vertical align
+*/
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/*
+clearfix
+*/
+@mixin clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*
+Adjusts background- and shadow color of the boxes
+*/
+
+@mixin box-color-adjust($background, $shadow) {
+	background-color: $background;
+	box-shadow: 4px 4px $shadow;
+}

@@ -1,0 +1,77 @@
+$quadrant-border-radius: 3em;
+$green-text-color: #3498db;
+
+.quadrants{
+  text-align:  center;
+  width:       80%;
+  margin:      auto;
+
+  .quadrant {
+    white-space:      nowrap;
+    margin:           0;
+    padding:          0;
+    overflow:         hidden;
+    width:            49%;
+    height:           35vh;
+    position:         relative;
+    display:          inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-y:       scroll;
+
+    span {
+
+      text-align:  center;
+      font-size:   2vmin;
+      font-weight: bold;
+      position:    absolute;
+    }
+  }
+
+  #first {
+    border-top-left-radius: $quadrant-border-radius;
+    border-bottom-right-radius: $quadrant-border-radius;
+  }
+
+  #second {
+    border-top-right-radius: $quadrant-border-radius;
+    border-bottom-left-radius: $quadrant-border-radius;
+  }
+
+  #third {
+    border-bottom-left-radius: $quadrant-border-radius;
+    border-top-right-radius: $quadrant-border-radius;
+  }
+
+  #fourth {
+    border-bottom-right-radius: $quadrant-border-radius;
+    border-top-left-radius: $quadrant-border-radius;
+  }
+}
+
+.top-left {
+  top:      0.5em;
+  left:     1.2em;
+  color:    $header-color;
+}
+
+.top-right {
+  top:      0.5em;
+  right:    1.2em;
+  color:    #e74c3c;
+}
+
+.bottom-left {
+  bottom:   0.5em;
+  left:     1.2em;
+  color:    $blue-button-color;
+}
+
+.bottom-right {
+  bottom:   0.5em;
+  right:    1.2em;
+  color:    $header-color;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
